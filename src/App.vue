@@ -1,22 +1,16 @@
 <template>
-  <div>
-    <p class="test">test</p>
-  </div>
+    <main-layout></main-layout>
 </template>
 
 <script>
-
+import mainLayout from "./layout/MainLayout.vue"
 export default {
   name: 'App',
   components: {
-    
-  }
+    mainLayout
+  },
 }
 </script>
 
 <style lang="scss" scoped>
- .test{
-  border: 1px solid black;
-  padding: 15px;
- }
 </style>
