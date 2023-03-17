@@ -1,7 +1,7 @@
 <template>
     <div class="top-menu-layout">
-        <div>
-            LOGO
+        <div class="top-menu-layout--img">
+            <img src="../assets/logo.png" alt="logo-vue" width="150" height="50">
         </div>
         <div>
             buscador
@@ -18,9 +18,15 @@ export default {
 </script>
 <style lang="scss" scoped>
     .top-menu-layout{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         min-height: 100px !important;
+    }
+    .top-menu-layout--img{
+
     }
 </style>
