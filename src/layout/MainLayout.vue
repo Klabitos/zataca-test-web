@@ -28,6 +28,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../style/colors.scss';
 .top-menu {
     position: absolute;
     top: 0px;
@@ -35,7 +36,7 @@ export default {
     min-height: 100px;
     max-height: 100px;
     width: 100%;
-    background-color: aquamarine;
+    background-color: $primary-yellow-color;
     border-bottom: 1px solid gray;
 }
 
@@ -45,7 +46,7 @@ export default {
     top: 100px;
     width: 100vw;
     height: calc(100vh - 100px);
-    background-color: bisque;
+    background-color: $primary-body-color;
 }
 
 .main-content-page__centered {
@@ -65,6 +66,6 @@ export default {
     min-height: 50px;
     max-height: 50px;
     border-top: 1px solid black;
-    background-color: greenyellow;
+    background-color: $primary-footer-color;
 }
 </style>

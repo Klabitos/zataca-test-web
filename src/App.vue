@@ -12,5 +12,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import "./style/colors.scss";
+
+*{
+    color: $primary-dark-color-font;
+}
+
 </style>

@@ -17,18 +17,19 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../style/colors.scss';
     .footer-layout{
-        background-color: pink;
         width: 100%;
         min-height: 50px;
 
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         
     }
     
     .footer-layout--item{
+        color: $primary-light-color-font !important;
         padding: 5px;
         font-weight: bold;
     }
