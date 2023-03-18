@@ -9,7 +9,7 @@
             </StandardCard>
         </div>
         <div v-else>
-            <h2>Data is being loaded...</h2>
+            <h2>No data avaible.</h2>
         </div>
     </div>
 </template>
