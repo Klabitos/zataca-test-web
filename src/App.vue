@@ -19,5 +19,7 @@ export default {
     color: $primary-dark-color-font;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+body{
+  background-color: var(--primary-body-color) !important;
+}
 </style>
