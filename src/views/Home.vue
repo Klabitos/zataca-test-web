@@ -1,15 +1,14 @@
 <template>
     <div>
-        HOME
-        <StandardCard />
+        <StardardCardGallery />
     </div>
 </template>
 <script>
-import StandardCard from '@/components/cards/StandardCard.vue';
+import StardardCardGallery from '@/components/cardsGallery/StandardCardGallery.vue';
 export default {
     name: 'Home-View',
     components:{
-        StandardCard
+        StardardCardGallery
     }
 }
 </script>

@@ -30,13 +30,15 @@ export default {
 <style lang="scss" scoped>
 @import '../style/colors.scss';
 .top-menu {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
+    z-index: 2;
     min-height: 120px;
     max-height: 120px;
     width: 100%;
     background-color: $primary-yellow-color;
+    border-bottom: 3px solid $primary-footer-color;
 }
 
 .main-content-page {
@@ -53,6 +55,7 @@ export default {
     top: 5rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 200px;
     width: 80%;
 }
 
@@ -64,7 +67,8 @@ export default {
     width: 100%;
     min-height: 50px;
     max-height: 50px;
-    border-top: 1px solid black;
+    border-top: 2px solid $primary-yellow-color;
     background-color: $primary-footer-color;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 </style>

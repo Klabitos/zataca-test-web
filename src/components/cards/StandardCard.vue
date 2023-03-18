@@ -1,12 +1,10 @@
 <template>
     <div class="card" :style="{backgroundColor: `${backgroundColorCard}`}">
         <div>
-            <h1>Title</h1>
+            <h1>{{title}}</h1>
         </div>
         <div class="card-body" >
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, architecto. Placeat esse error atque
-                beatae omnis ipsum modi, delectus provident suscipit minus ea voluptatem? Aperiam, aliquam laboriosam. Ut,
-                officiis optio.</p>
+            <p>{{description}}</p>
         </div>
         <div class="card-link" @mouseover="() => backgroundColorCard='#FFC857'" @mouseleave="() => backgroundColorCard=''">
             <h2 class="card-link-text">More information</h2>
@@ -16,6 +14,16 @@
 <script>
 export default {
     name: 'StandardCard',
+    props:{
+        title:{
+            type:String,
+            default:'Title'
+        },
+        description:{
+            type:String,
+            default:'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        }
+    },
     data(){
         return{
             backgroundColorCard:''
@@ -39,8 +47,8 @@ export default {
 .card-link {
     position: relative;
     bottom: -30px;
-    left: -9%;
-    width: 118%;
+    left: -10%;
+    width: 120%;
     min-height: 50px;
     border-radius: 0px 0px 15px 15px;
     background-color: $primary-dark-color-font;
