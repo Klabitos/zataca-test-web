@@ -1,6 +1,6 @@
 <template>
     <div>
-        <StardardCardGallery v-if="allItemsData.length > 0" :items="getFilteredItems" />
+        <StardardCardGallery :items="getFilteredItems" />
     </div>
 </template>
 <script>
@@ -21,10 +21,13 @@ export default {
     created() {
         getItemsData().then(result => {
             this.allItemsData = result.data
+        }).catch(() =>{
+            this.allItemsData = null
         })
     },
     computed:{
         getFilteredItems(){
+            if(this.allItemsData == null) return this.allItemsData
             const arrayWithItems = this.allItemsData.map(item => {
                 item.body = item.body.replace('\n', ' ') //In 'body' we can find both \n and spaces
                 return item

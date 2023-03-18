@@ -1,9 +1,15 @@
 <template>
     <div class="standard-gallery">
         <h1>{{$t('components.home.faq')}}</h1>
-        <div class="standard-gallery-cards">
+        <div v-if="items==null">
+            <h2>Error while fetching the data. Try again later.</h2>
+        </div>
+        <div v-else-if="items.length>0" class="standard-gallery-cards">
             <StandardCard v-for="(item) in items" :key="item.id" :title="item.title" :description="item.body">
             </StandardCard>
+        </div>
+        <div v-else>
+            <h2>Data is being loaded...</h2>
         </div>
     </div>
 </template>
