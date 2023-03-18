@@ -8,8 +8,8 @@
         </div>
         <div class="top-menu-dark-mode" @click="changeToDarkMode">
             <h2>
-                <i v-if="isLightOff" class="fa-solid fa-lightbulb"></i>
-                <i v-else class="fa-regular fa-lightbulb"></i>
+                <i v-if="isLightOff" class="fa-solid fa-sun"></i>
+                <i v-else class="fa-solid fa-moon"></i>
             </h2>
         </div>
         <div class="top-menu-language" @click="changeLanguage">
