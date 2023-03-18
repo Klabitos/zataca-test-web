@@ -6,11 +6,14 @@
         <div class="top-menu-search-bar">
             <SearchBar />
         </div>
-        <div class="top-menu-dark-mode">
-            <h2 @click="changeToDarkMode">DARK</h2>
+        <div class="top-menu-dark-mode" @click="changeToDarkMode">
+            <h2>
+                <i v-if="isLightOff" class="fa-solid fa-lightbulb"></i>
+                <i v-else class="fa-regular fa-lightbulb"></i>
+            </h2>
         </div>
-        <div class="top-menu-language">
-            <h2 @click="changeLanguage">{{this.$i18n.locale.toUpperCase()}}</h2>
+        <div class="top-menu-language" @click="changeLanguage">
+            <h2>{{this.$i18n.locale.toUpperCase()}}</h2>
         </div>
         <div class="top-menu-profile">
             <h2>Pablo Cruz</h2>
@@ -23,6 +26,11 @@ export default {
     components: {
         SearchBar
     },
+    data(){
+        return{
+            isLightOff: false
+        }
+    },
     methods:{
         changeLanguage(){
             if(this.$i18n.locale == 'en'){ 
@@ -33,7 +41,11 @@ export default {
         },
         changeToDarkMode(){
             document.body.classList.toggle("dark-mode");
+            this.isLightOff = !this.isLightOff
         }
+    },
+    computed:{
+
     }
 }
 </script>
@@ -53,10 +65,13 @@ export default {
 }
 
 .top-menu-language, .top-menu-dark-mode{
-    text-align: center;
-    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    max-height: 40px;
     background-color: var(--orange);
-    border-radius: 50px;
+    border-radius: 40px;
     padding: 5px;
     cursor: pointer;
 }

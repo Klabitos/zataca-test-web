@@ -7,7 +7,7 @@
             Pablo Cruz Rodríguez <span class="beutiful-icon">||</span> 
         </div>
         <div class="footer-layout--item">
-            Github (Klabitos) 
+            <i class="fa-brands fa-github"></i> Klabitos
         </div>
     </div>
 </template>
@@ -31,8 +31,11 @@ export default {
         color: var(--primary-light-color-font) !important;
         padding: 5px;
         font-weight: bold;
-    }
 
+        i{
+            color:  var(--primary-light-color-font) !important;
+        }
+    }
     .beutiful-icon{
         color: var(--primary-yellow-color);
     }
