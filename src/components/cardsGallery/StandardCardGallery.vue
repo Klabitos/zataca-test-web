@@ -2,7 +2,7 @@
     <div class="standard-gallery">
         <h1>Frequently Asked Questions:</h1>
         <div class="standard-gallery-cards">
-            <StandardCard v-for="(item) in 16" :key="item.id" :title="item.title" :description="item.description"></StandardCard>
+            <StandardCard v-for="(item) in items" :key="item.id" :title="item.title" :description="item.description"></StandardCard>
         </div>
     </div>
 </template>
@@ -13,6 +13,14 @@ export default {
     components:{
         StandardCard
     },
+    props:{
+        items:{
+            type:Array,
+            default(){
+                return []
+            }
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
