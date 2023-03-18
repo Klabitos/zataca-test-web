@@ -4,7 +4,7 @@
             placeholder="Search a title or description...">
         <div class="search-bar-options">
             <input v-model="isTitleActive" disabled type="checkbox"> Title
-            <input v-model="isDescriptionActive" type="checkbox"> Description
+            <input v-model="isDescriptionActive" @change=" () => this.$globals.isDescriptionActive = isDescriptionActive" type="checkbox"> Description
         </div>
     </div>
 </template>
@@ -21,7 +21,8 @@ export default {
     },
     created() {
         Vue.prototype.$globals = Vue.observable({
-            filter: ''
+            filter: '',
+            isDescriptionActive: false
         });
     },
     methods: {

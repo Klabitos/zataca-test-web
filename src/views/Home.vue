@@ -25,7 +25,14 @@ export default {
     },
     computed:{
         getFilteredItems(){
-            return this.allItemsData.filter(item => item.title.includes(this.$globals.filter))
+            const arrayWithItems = this.allItemsData.map(item => {
+                item.body = item.body.replace('\n', ' ') //In 'body' we can find both \n and spaces
+                return item
+            })
+            if(this.$globals.isDescriptionActive){
+                return arrayWithItems.filter(item => item.body.includes(this.$globals.filter) || item.title.includes(this.$globals.filter))
+            }
+            return arrayWithItems.filter(item => item.title.includes(this.$globals.filter))
         }
     }
 

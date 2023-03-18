@@ -2,7 +2,7 @@
     <div class="standard-gallery">
         <h1>Frequently Asked Questions:</h1>
         <div class="standard-gallery-cards">
-            <StandardCard v-for="(item) in items" :key="item.id" :title="item.title" :description="item.description">
+            <StandardCard v-for="(item) in items" :key="item.id" :title="item.title" :description="item.body">
             </StandardCard>
         </div>
     </div>
