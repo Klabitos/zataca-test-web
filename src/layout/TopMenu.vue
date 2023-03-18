@@ -14,30 +14,44 @@
 <script>
 import SearchBar from '@/components/inputs/SearchBar.vue';
 export default {
-    components:{
+    components: {
         SearchBar
     }
 }
 </script>
 <style lang="scss" scoped>
+.top-menu-layout {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px !important;
+}
+
+.top-menu-search-bar {
+    width: 60%;
+}
+
+.top-menu-profile {
+    border-radius: 10px;
+    background-color: orange;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+@media (max-width:800px) {
     .top-menu-layout{
-        width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 100px !important;
+        justify-content: space-around;
     }
-    .top-menu-search-bar{
-        width: 60%;
+    .top-menu-search-bar {
+        width: 30%;
     }
 
-    .top-menu-profile{
-        border-radius: 10px;
-        background-color: orange;
-        padding: 5px;
-        padding-left: 35px;
-        padding-right: 35px;
+    .top-menu-profile {
+        display: none;
     }
+}
 </style>

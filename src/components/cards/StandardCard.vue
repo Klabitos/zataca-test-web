@@ -63,7 +63,7 @@ export default {
     min-width: 100%;
     text-align: center;
     color: white;
-    padding-top: 10px;
+    padding-top: 4px;
 }
 
 .card-link:hover .card-link-text {

@@ -37,4 +37,16 @@ export default {
         color: $primary-yellow-color;
     }
 
+    @media (max-width:800px) {
+        .footer-layout--item:last-child{
+            display: none;
+        }
+    }
+
+    @media (max-width:550px) {
+        .footer-layout--item:first-child{
+            display: none;
+        }
+    }
+
 </style>

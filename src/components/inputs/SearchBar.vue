@@ -30,4 +30,11 @@ export default {
 .search-bar-options{
     margin-top: 0.5rem;
 }
+
+@media (max-width:550px) {
+    .search-bar-options{
+        display: none;
+    }
+}
+
 </style>
