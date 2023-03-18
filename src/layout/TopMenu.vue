@@ -6,6 +6,9 @@
         <div class="top-menu-search-bar">
             <SearchBar />
         </div>
+        <div class="top-menu-language">
+            <h2 @click="changeLanguage">{{this.$i18n.locale.toUpperCase()}}</h2>
+        </div>
         <div class="top-menu-profile">
             <h2>Pablo Cruz</h2>
         </div>
@@ -16,6 +19,15 @@ import SearchBar from '@/components/inputs/SearchBar.vue';
 export default {
     components: {
         SearchBar
+    },
+    methods:{
+        changeLanguage(){
+            if(this.$i18n.locale == 'en'){ 
+                this.$i18n.locale = 'es'
+            }else{
+                this.$i18n.locale = 'en'
+            }
+        }
     }
 }
 </script>
@@ -32,6 +44,15 @@ export default {
 
 .top-menu-search-bar {
     width: 60%;
+}
+
+.top-menu-language{
+    text-align: center;
+    width: 70px;
+    background-color: orange;
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .top-menu-profile {

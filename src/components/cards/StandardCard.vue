@@ -7,7 +7,7 @@
             <p>{{description}}</p>
         </div>
         <div class="card-link" @mouseover="() => backgroundColorCard='#FFC857'" @mouseleave="() => backgroundColorCard=''">
-            <h2 class="card-link-text">More information</h2>
+            <h2 class="card-link-text">{{$t('components.cards.more-information')}}</h2>
         </div>
     </div>
 </template>
@@ -17,7 +17,7 @@ export default {
     props:{
         title:{
             type:String,
-            default:'Title'
+            default:'Lorem'
         },
         description:{
             type:String,

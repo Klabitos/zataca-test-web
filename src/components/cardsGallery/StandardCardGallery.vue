@@ -1,6 +1,6 @@
 <template>
     <div class="standard-gallery">
-        <h1>Frequently Asked Questions:</h1>
+        <h1>{{$t('components.home.faq')}}</h1>
         <div class="standard-gallery-cards">
             <StandardCard v-for="(item) in items" :key="item.id" :title="item.title" :description="item.body">
             </StandardCard>

@@ -1,0 +1,15 @@
+{
+  "components": {
+    "search-bar": {
+      "title": "Título",
+      "description": "Descripción",
+      "placeholder": "Buscar por título o descripción..."
+    },
+    "cards": {
+      "more-information": "Más información"
+    },
+    "home": {
+      "faq": "Preguntas Frecuentes"
+    }
+  }
+}

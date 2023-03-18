@@ -1,10 +1,10 @@
 <template>
     <div class="search-bar-container">
         <input v-model="inputText" class="search-bar" @keyup="filterTextChanged" type="text"
-            placeholder="Search for a title or description...">
+            :placeholder="$t('components.search-bar.placeholder')">
         <div class="search-bar-options">
-            <input v-model="isTitleActive" disabled type="checkbox"> Title
-            <input v-model="isDescriptionActive" @change=" () => this.$globals.isDescriptionActive = isDescriptionActive" type="checkbox"> Description
+            <input v-model="isTitleActive" disabled type="checkbox"> {{$t('components.search-bar.title')}}
+            <input v-model="isDescriptionActive" @change=" () => this.$globals.isDescriptionActive = isDescriptionActive" type="checkbox"> {{$t('components.search-bar.description')}}
         </div>
     </div>
 </template>
