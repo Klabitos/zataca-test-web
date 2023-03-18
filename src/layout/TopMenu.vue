@@ -6,6 +6,9 @@
         <div class="top-menu-search-bar">
             <SearchBar />
         </div>
+        <div class="top-menu-dark-mode">
+            <h2 @click="changeToDarkMode">DARK</h2>
+        </div>
         <div class="top-menu-language">
             <h2 @click="changeLanguage">{{this.$i18n.locale.toUpperCase()}}</h2>
         </div>
@@ -27,6 +30,9 @@ export default {
             }else{
                 this.$i18n.locale = 'en'
             }
+        },
+        changeToDarkMode(){
+            document.body.classList.toggle("dark-mode");
         }
     }
 }
@@ -46,18 +52,23 @@ export default {
     width: 60%;
 }
 
-.top-menu-language{
+.top-menu-language, .top-menu-dark-mode{
     text-align: center;
     width: 70px;
-    background-color: orange;
+    background-color: var(--orange);
     border-radius: 50px;
     padding: 5px;
     cursor: pointer;
 }
 
+.top-menu-dark-mode{
+    position: relative;
+    left: 15px;
+}
+
 .top-menu-profile {
     border-radius: 10px;
-    background-color: orange;
+    background-color: var(--orange);
     padding: 5px;
     padding-left: 35px;
     padding-right: 35px;

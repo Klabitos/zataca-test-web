@@ -39,7 +39,7 @@ export default {
     position: relative;
     top: 0px;
     transition: 2s;
-    border: 3px solid $primary-dark-color-font;
+    border: 3px solid var(--primary-dark-color-font);
     border-radius: 15px;
     max-width: 300px;
     min-height: 400px;
@@ -56,13 +56,13 @@ export default {
     width: 100%;
     min-height: 50px;
     border-radius: 0px 0px 15px 15px;
-    background-color: $primary-dark-color-font;
+    background-color: var(--primary-dark-color-font);
     cursor: pointer;
 }
 .card-link-text {
     min-width: 100%;
     text-align: center;
-    color: white;
+    color: var(--primary-light-color-font);
     padding-top: 4px;
 }
 

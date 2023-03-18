@@ -3,6 +3,34 @@ $primary-yellow-color: #FFC857;
 $primary-body-color: #F7F7FF;
 $primary-footer-color: #4B3F72;
 
+$primary-yellow-color-dark: #b38c44;
+$primary-body-color-dark: #262626;
+$primary-footer-color-dark: #857a96;
+
 //Fonts
 $primary-dark-color-font: #4B3F72;
 $primary-light-color-font: #F7F7FF;
+
+$primary-dark-color-font-dark: #857a96;
+$primary-light-color-font-dark: #262626;
+
+// Define variables for light mode
+:root {
+    --primary-yellow-color: #{$primary-yellow-color};
+    --primary-body-color: #{$primary-body-color};
+    --primary-footer-color: #{$primary-footer-color};
+    --primary-dark-color-font: #{$primary-dark-color-font};
+    --primary-light-color-font: #{$primary-light-color-font};
+    --orange: orange
+  }
+  
+// Define variables for dark mode
+body.dark-mode {
+    --primary-yellow-color: #{$primary-yellow-color-dark};
+    --primary-body-color: #{$primary-body-color-dark};
+    --primary-footer-color: #{$primary-footer-color-dark};
+    --primary-light-color-font: #{$primary-light-color-font-dark};
+    --orange: #FFA500
+  }
+
+

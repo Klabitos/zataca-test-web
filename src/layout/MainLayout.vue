@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main-layout">
         <div class="top-menu">
             <top-menu />
         </div>
@@ -24,11 +24,10 @@ export default {
     name: 'main-layout',
     components: {
         TopMenu, FooterInfo
-    }
+    },
 }
 </script>
 <style lang="scss" scoped>
-@import '../style/colors.scss';
 .top-menu {
     position: fixed;
     top: 0px;
@@ -37,8 +36,8 @@ export default {
     min-height: 100px;
     max-height: 100px;
     width: 100%;
-    background-color: $primary-yellow-color;
-    border-bottom: 3px solid $primary-footer-color;
+    background-color: var(--primary-yellow-color) !important;
+    border-bottom: 3px solid var(--primary-footer-color);
 }
 
 .main-content-page {
@@ -46,8 +45,8 @@ export default {
     left: 0px;
     top: 60px;
     width: 100vw;
-    height: calc(100vh - 120px);
-    background-color: $primary-body-color;
+    height: auto;
+    background-color: var(--primary-body-color) !important;
 }
 
 .main-content-page__centered {
@@ -57,6 +56,8 @@ export default {
     margin-right: auto;
     margin-bottom: 160px;
     width: 80%;
+    background-color: var(--primary-body-color) !important;
+
 }
 
 
@@ -67,8 +68,8 @@ export default {
     width: 100%;
     min-height: 50px;
     max-height: 50px;
-    border-top: 2px solid $primary-yellow-color;
-    background-color: $primary-footer-color;
+    border-top: 2px solid var(--primary-yellow-color);
+    background-color: var(--primary-footer-color) !important;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 </style>

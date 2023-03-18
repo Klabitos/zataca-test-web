@@ -21,20 +21,20 @@ export default {
     .footer-layout{
         width: 100%;
         min-height: 50px;
-
+        background-color: var(--primary-dark-color-font);
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
     
     .footer-layout--item{
-        color: $primary-light-color-font !important;
+        color: var(--primary-light-color-font) !important;
         padding: 5px;
         font-weight: bold;
     }
 
     .beutiful-icon{
-        color: $primary-yellow-color;
+        color: var(--primary-yellow-color);
     }
 
     @media (max-width:800px) {

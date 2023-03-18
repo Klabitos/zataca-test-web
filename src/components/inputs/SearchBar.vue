@@ -38,11 +38,15 @@ export default {
     width: 100%;
     padding: 15px;
     border-radius: 20px;
+    background-color: var(--primary-body-color);
+    color: var(--primary-dark-color-font);
+    font-weight: bold;
 }
 
 .search-bar-options {
     margin-top: 0.5rem;
 }
+
 
 @media (max-width:550px) {
     .search-bar-options {
