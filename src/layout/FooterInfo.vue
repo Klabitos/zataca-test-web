@@ -17,7 +17,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '../style/colors.scss';
     .footer-layout{
         width: 100%;
         min-height: 50px;

@@ -89,6 +89,16 @@ export default {
     padding-right: 35px;
 }
 
+@media (max-width:1200px) {
+    .top-menu-profile{
+        font-size: small;
+        max-width: 60px;
+        max-height: 60px;
+        overflow: hidden;
+        padding: 5px;
+    }
+}
+
 @media (max-width:800px) {
     .top-menu-layout{
         justify-content: space-around;
@@ -98,6 +108,12 @@ export default {
     }
 
     .top-menu-profile {
+        display: none;
+    }
+}
+
+@media (max-width:550px){
+    .top-menu-layout--img{
         display: none;
     }
 }
