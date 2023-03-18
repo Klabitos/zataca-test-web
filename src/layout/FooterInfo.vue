@@ -1,13 +1,13 @@
 <template>
     <div class="footer-layout">
         <div class="footer-layout--item">
-            correo
+            cruzrodripablo@gmail.com ||
         </div>
         <div class="footer-layout--item">
-            nombre
+            Pablo Cruz Rodríguez ||
         </div>
         <div class="footer-layout--item">
-            github
+            Github (Klabitos) ||
         </div>
     </div>
 </template>
@@ -25,7 +25,6 @@ export default {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        
     }
     
     .footer-layout--item{

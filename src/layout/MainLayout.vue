@@ -33,11 +33,10 @@ export default {
     position: absolute;
     top: 0px;
     left: 0px;
-    min-height: 100px;
-    max-height: 100px;
+    min-height: 120px;
+    max-height: 120px;
     width: 100%;
     background-color: $primary-yellow-color;
-    border-bottom: 1px solid gray;
 }
 
 .main-content-page {
@@ -45,7 +44,7 @@ export default {
     left: 0px;
     top: 100px;
     width: 100vw;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     background-color: $primary-body-color;
 }
 
