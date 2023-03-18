@@ -1,7 +1,7 @@
 <template>
     <div class="search-bar-container">
         <input v-model="inputText" class="search-bar" @keyup="filterTextChanged" type="text"
-            placeholder="Search a title or description...">
+            placeholder="Search for a title or description...">
         <div class="search-bar-options">
             <input v-model="isTitleActive" disabled type="checkbox"> Title
             <input v-model="isDescriptionActive" @change=" () => this.$globals.isDescriptionActive = isDescriptionActive" type="checkbox"> Description
