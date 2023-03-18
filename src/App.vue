@@ -17,6 +17,7 @@ export default {
 
 *{
     color: $primary-dark-color-font;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 </style>

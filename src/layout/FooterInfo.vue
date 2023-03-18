@@ -1,13 +1,13 @@
 <template>
     <div class="footer-layout">
         <div class="footer-layout--item">
-            cruzrodripablo@gmail.com ||
+            cruzrodripablo@gmail.com <span class="beutiful-icon">||</span> 
         </div>
         <div class="footer-layout--item">
-            Pablo Cruz Rodríguez ||
+            Pablo Cruz Rodríguez <span class="beutiful-icon">||</span> 
         </div>
         <div class="footer-layout--item">
-            Github (Klabitos) ||
+            Github (Klabitos) 
         </div>
     </div>
 </template>
@@ -31,6 +31,10 @@ export default {
         color: $primary-light-color-font !important;
         padding: 5px;
         font-weight: bold;
+    }
+
+    .beutiful-icon{
+        color: $primary-yellow-color;
     }
 
 </style>

@@ -34,8 +34,8 @@ export default {
     top: 0px;
     left: 0px;
     z-index: 2;
-    min-height: 120px;
-    max-height: 120px;
+    min-height: 100px;
+    max-height: 100px;
     width: 100%;
     background-color: $primary-yellow-color;
     border-bottom: 3px solid $primary-footer-color;
@@ -44,7 +44,7 @@ export default {
 .main-content-page {
     position: absolute;
     left: 0px;
-    top: 100px;
+    top: 60px;
     width: 100vw;
     height: calc(100vh - 120px);
     background-color: $primary-body-color;
@@ -55,7 +55,7 @@ export default {
     top: 5rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 200px;
+    margin-bottom: 160px;
     width: 80%;
 }
 
