@@ -33,9 +33,9 @@ export default {
                 return item
             })
             if(this.$globals.isDescriptionActive){
-                return arrayWithItems.filter(item => item.body.includes(this.$globals.filter) || item.title.includes(this.$globals.filter))
+                return arrayWithItems.filter(item => item.body.toUpperCase().includes(this.$globals.filter.toUpperCase()) || item.title.toUpperCase().includes(this.$globals.filter.toUpperCase()))
             }
-            return arrayWithItems.filter(item => item.title.includes(this.$globals.filter))
+            return arrayWithItems.filter(item => item.title.toUpperCase().includes(this.$globals.filter.toUpperCase()))
         }
     }
 
