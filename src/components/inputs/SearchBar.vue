@@ -78,5 +78,9 @@ export default {
     .search-bar-options {
         display: none;
     }
+
+    .icon-input-bar{
+        left: 10px;
+    }
 }
 </style>

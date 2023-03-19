@@ -48,4 +48,12 @@ export default {
 
     .go-back-container:hover .go-back-message{
         opacity: 1;
-    }</style>
+    }
+    
+    @media (max-width:850px) {
+        .go-back-container{
+            left: 0px;
+        }
+    }
+    
+</style>
