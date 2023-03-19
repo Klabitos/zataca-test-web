@@ -9,21 +9,38 @@
                 <h4 class="go-back-message">Home</h4>
             </div>
         </router-link>
-        <StandardCard></StandardCard>
+        <h3 v-if="item=='loading'">Data is being loaded. Wait a minute please.</h3>
+        <DetailCard v-else-if="item!=''" :itemInfo="item"></DetailCard>
+        <h3 v-if="item==null">No detail information avaible</h3>
 
     </div>
 </template>
 <script>
-import StandardCard from '@/components/cards/StandardCard.vue';
+import { getItemDataById } from '@/service/defaultItems';
+import DetailCard from '@/components/cards/DetailCard.vue';
 export default {
     name:"CardDetail",
     components:{
-        StandardCard
+        DetailCard
+    },
+    data(){
+        return{
+            item:'loading'
+        }
+    },
+    created(){
+        getItemDataById(this.$route.params.id).then(result =>{
+            this.item = result.data
+        }).catch(() =>{
+            this.item = null
+        })
     }
 }
 </script>
 <style lang="scss" scoped>
     .go-back-container{
+        position: relative;
+        left: -100px;
         max-width: 130px;
         display: flex;
         justify-content: space-between;
@@ -37,17 +54,21 @@ export default {
         border-radius: 25px;
         padding: 15px;
         margin: 20px;
+        cursor: pointer;
+
     }
 
     .go-back-message{
         transition: 1s;
         opacity: 0;
+        cursor: pointer;
+
     }
 
     .go-back-container:hover {
-        max-width: 200px;
+        max-width: 150px;
     }
-    
+
     .go-back-container:hover .go-back-message{
         opacity: 1;
     }
