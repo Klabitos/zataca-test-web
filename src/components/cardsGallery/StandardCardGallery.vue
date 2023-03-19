@@ -5,7 +5,7 @@
             <h2>Error while fetching the data. Try again later.</h2>
         </div>
         <div v-else-if="items.length>0" class="standard-gallery-cards">
-            <StandardCard v-for="(item) in items" :key="item.id" :title="item.title" :description="item.body">
+            <StandardCard v-for="(item) in items" :key="item.id" :itemInfo="item" >
             </StandardCard>
         </div>
         <div v-else>

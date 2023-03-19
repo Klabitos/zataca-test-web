@@ -1,7 +1,9 @@
 <template>
     <div class="top-menu-layout">
         <div class="top-menu-layout--img">
-            <img src="../assets/logo.png" alt="logo-vue" width="150" height="50">
+            <router-link to="/">
+                <img src="../assets/logo.png" alt="logo-vue" width="150" height="50">
+            </router-link>
         </div>
         <div class="top-menu-search-bar">
             <SearchBar />

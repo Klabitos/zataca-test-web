@@ -1,32 +1,36 @@
 <template>
-    <div class="card" :style="{backgroundColor: `${backgroundColorCard}`}">
+    <div class="card" :style="{ backgroundColor: `${backgroundColorCard}` }">
         <div>
-            <h1>{{title}}</h1>
+            <h1>{{ itemInfo.title }}</h1>
         </div>
-        <div class="card-body" >
-            <p>{{description}}</p>
+        <div class="card-body">
+            <p>{{ itemInfo.description }}</p>
         </div>
-        <div class="card-link" @mouseover="() => backgroundColorCard='#FFC857'" @mouseleave="() => backgroundColorCard=''">
-            <h2 class="card-link-text">{{$t('components.cards.more-information')}}</h2>
+        <div class="card-link" @mouseover="() => backgroundColorCard = '#FFC857'" @mouseleave="() => backgroundColorCard = ''">
+            <router-link :to="`/detail/${itemInfo.id}`">
+                <h2 class="card-link-text">{{ $t('components.cards.more-information') }}</h2>
+            </router-link>
         </div>
     </div>
 </template>
 <script>
 export default {
     name: 'StandardCard',
-    props:{
-        title:{
-            type:String,
-            default:'Lorem'
-        },
-        description:{
-            type:String,
-            default:'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+    props: {
+        itemInfo: {
+            type: Object,
+            default() {
+                return {
+                    id: '0',
+                    title: 'Lorem',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+                }
+            }
         }
     },
-    data(){
-        return{
-            backgroundColorCard:''
+    data() {
+        return {
+            backgroundColorCard: ''
         }
     },
 
@@ -59,6 +63,7 @@ export default {
     background-color: var(--primary-dark-color-font);
     cursor: pointer;
 }
+
 .card-link-text {
     min-width: 100%;
     text-align: center;
@@ -70,7 +75,4 @@ export default {
     transition: 0.2s;
     color: $primary-yellow-color;
 }
-
-
-
 </style>
