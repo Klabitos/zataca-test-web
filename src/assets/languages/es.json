@@ -9,7 +9,14 @@
       "more-information": "Más información"
     },
     "home": {
+      "home": "Inicio",
       "faq": "Preguntas Frecuentes"
+    },
+    "data": {
+      "error-fetching": "Error al obtener los datos. Prueba más tarde por favor.",
+      "being-loaded": "Obteniendo información. Espere un segundo por favor.",
+      "no-data": "Información no disponible.",
+      "no-detail-data": "Detalles no disponibles."
     }
   }
 }

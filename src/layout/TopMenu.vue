@@ -2,7 +2,7 @@
     <div class="top-menu-layout">
         <div class="top-menu-layout--img">
             <router-link to="/">
-                <img src="../assets/logo.png" alt="logo-vue" width="150" height="50">
+                <img src="../assets/logo.png" alt="logo" width="150" height="50">
             </router-link>
         </div>
         <div class="top-menu-search-bar">

@@ -6,12 +6,12 @@
                     <i class="fa-sharp fa-solid fa-arrow-left"></i>
                     
                 </button>
-                <h4 class="go-back-message">Home</h4>
+                <h4 class="go-back-message">{{$t('components.home.home')}}</h4>
             </div>
         </router-link>
-        <h3 v-if="item=='loading'">Data is being loaded. Wait a minute please.</h3>
+        <h3 v-if="item=='loading'">{{$t('components.data.being-loaded')}}</h3>
         <DetailCard v-else-if="item!=''" :itemInfo="item"></DetailCard>
-        <h3 v-if="item==null">No detail information avaible</h3>
+        <h3 v-if="item==null">{{$t('components.data.no-detail-data')}}</h3>
 
     </div>
 </template>

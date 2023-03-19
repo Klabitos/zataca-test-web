@@ -5,13 +5,18 @@
       "description": "Description",
       "placeholder": "Search by title or description..."
     },
-    "cards": 
-      {
-        "more-information": "More Information"
-      }
-    ,
+    "cards": {
+      "more-information": "More Information"
+    },
     "home": {
+      "home": "Home",
       "faq": "Frequently Asked Questions"
+    },
+    "data": {
+      "error-fetching": "Error while fetching the data. Try again later.",
+      "being-loaded": "Data is being loaded. Wait a minute please.",
+      "no-data": "No data avaible.",
+      "no-detail-data": "No detail information avaible"
     }
   }
 }
